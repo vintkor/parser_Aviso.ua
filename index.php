@@ -48,7 +48,7 @@ while ($count <= (int)$int_current_pages) {
         $all_result = "div.line_ads:eq($i)";
         $one_result = $document2->find($all_result);
 
-        $in_result = phpQuery::newDocument($one_result);
+        $in_result = pq($one_result);
         $find_price = 'div.price';
 
         $stringPrice = explode('</span>', $in_result->find($find_price));
